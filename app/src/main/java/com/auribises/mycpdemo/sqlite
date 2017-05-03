@@ -1,0 +1,75 @@
+Ishants-Macbook-Air:~ ishantkumar$ cd /Users/ishantkumar/Library/Android/sdk
+Ishants-Macbook-Air:sdk ishantkumar$ pwd
+/Users/ishantkumar/Library/Android/sdk
+Ishants-Macbook-Air:sdk ishantkumar$ ls
+SDK Readme.txt	extras		platform-tools	sources
+add-ons		licenses	platforms	system-images
+build-tools	ndk-bundle	samples		temp
+docs		patcher		skins		tools
+Ishants-Macbook-Air:sdk ishantkumar$ cd platform-tools/
+Ishants-Macbook-Air:platform-tools ishantkumar$ pwd
+/Users/ishantkumar/Library/Android/sdk/platform-tools
+Ishants-Macbook-Air:platform-tools ishantkumar$ ./adb shell
+root@generic_x86:/ # ls
+acct
+cache
+charger
+config
+d
+data
+default.prop
+dev
+etc
+file_contexts
+fstab.goldfish
+fstab.ranchu
+init
+init.environ.rc
+init.goldfish.rc
+init.ranchu.rc
+init.rc
+init.trace.rc
+init.usb.rc
+init.zygote32.rc
+mnt
+oem
+proc
+property_contexts
+root
+sbin
+sdcard
+seapp_contexts
+selinux_version
+sepolicy
+service_contexts
+storage
+sys
+system
+ueventd.goldfish.rc
+ueventd.ranchu.rc
+ueventd.rc
+vendor
+root@generic_x86:/ # cd data/data/com.auribises.mycpdemo
+root@generic_x86:/data/data/com.auribises.mycpdemo # pwd
+/data/data/com.auribises.mycpdemo
+root@generic_x86:/data/data/com.auribises.mycpdemo # cd databases
+root@generic_x86:/data/data/com.auribises.mycpdemo/databases # ls
+Students.db
+Students.db-journal
+qlite3 Students.db                                                            <
+SQLite version 3.8.10.2 2015-05-20 18:17:19
+Enter ".help" for usage hints.
+sqlite> .tables
+Student           android_metadata
+sqlite> select * from Student;
+1|John|9999988888|john@example.com||Ludhina
+2|Jennie|7777788888|john@example.com||Chandigarh
+3|Harry|7766776676|harry@example.com||Delhi
+4|Fionna|445566776|fionna@example.com||Bengaluru
+sqlite> update Student set NAME='John Watson' where _ID = 1;
+sqlite> select * from Student;
+1|John Watson|9999988888|john@example.com||Ludhina
+2|Jennie|7777788888|john@example.com||Chandigarh
+3|Harry|7766776676|harry@example.com||Delhi
+4|Fionna|445566776|fionna@example.com||Bengaluru
+sqlite>
